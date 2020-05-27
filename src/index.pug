@@ -6,56 +6,57 @@ head
     meta(name="description" content="Clothing store")
     meta(name="author" content="Melnikov Sergey")
     title Ave
-    //-link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet")
     link(rel="stylesheet", type="text/css", href="fonts/font-awesome.min.css")
     link(rel="stylesheet" href="main.css")
 body
     header
         .top-bar
-            .container.glr
-                .currency.glb
+            .container
+                .currency
                     .text Currency :
                     select(name="#")
                         option(value="GBP" selected) GBP
                         option(value="USD") USD
                         option(value="EUR") EUR
                         option(value="RUR") RUR
-                .register.glb
+                .register
                     a(href="register.html") Register
                     a(href="SignIn.html") Sign In
-                .basket.glb
+                .basket
                     i(class="fas fa-shopping-cart")
                     select(name="#") 
                         option(value="empty" selected) empty
                         option(value="USD") ....
                         option(value="EUR") abcd
                         option(value="RUR") efgh
-        .slider
-            .container
-                .header_top
-                    .logo.glb
+        .slider          
+            .header_top
+                .logo
+                    a.logo 
                         strong avenue &nbsp;
                         span fashion
-                    .nav.glb
-                        ul
-                            li
-                                a(href="") mens
-                            li
-                                a(href="") womens
-                            li
-                                a(href="") the brand
-                            li
-                                a(href="") local stores
-                            li
-                                a(href="") look book
-                    .search.glb
-                        form(action="get")
-                            input(type="search", placeholder="Search..")
-                            button(type="submit", value="")
-                                i(class="fas fa-search" )
-                .button
-                    button shop men’s collection
-                span A  V  E
+                .nav
+                    ul
+                        li
+                            a(href="") mens
+                            
+                        li
+                            a(href="") womens
+                        li
+                            a(href="") the brand
+                        li
+                            a(href="") local stores
+                        li
+                            a(href="") look book
+                .search
+                    form(action="get")
+                        input(type="search", placeholder="Search..")
+                        button(type="submit", value="")
+                            i(class="fas fa-search" )
+            .ave A  V  E
+            .button
+                button shop men’s collection
     script(src="js/main.js")
 
                                    
