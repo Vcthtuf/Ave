@@ -57,6 +57,12 @@ body
             .ave A  V  E
             .button
                 button shop men’s collection
+    form(name="person")
+        input.text#surname(type="text" name="surname" placeholder="Введите фамилию")
+        input.text#name(type="text" placeholder="Введите имя")
+        input.text#middle_name(type="text" placeholder="Введите отчество")
+        input.text#position(type="text" placeholder="Введите должность")
+        input.submit#submit(type="submit" value="Запомнить" onclick="get_elements_form()")
     script(src="js/main.js")
 
                                    

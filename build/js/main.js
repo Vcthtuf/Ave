@@ -107,10 +107,55 @@ let arr = [89, 5, 76, 11];
         return a-b;
     };
 
-    console.log(arr);
+    //console.log(arr);
+
+//localStorage.setItem("number", 12);
+
+let form, surname, name, middle_name, position;
+
+//let input_submit = document.getElementById('submit');
+
+let person = {};
+
+
+function get_elements_form() {
+
+    surname = document.getElementById('surname').value;
+
+    name = document.getElementById('name').value;
+
+    middle_name = document.getElementById('middle_name').value;
+
+    position = document.getElementById('position').value;
+
+    //write_person(surname, name, middle_name, position)();
+
+    person['surname'] = surname;
+    alert(surname);
+
+    
+    
+    return person
+
+   /* let SerialazedPerson = JSON.stringify(person);
+
+    localStorage.setItem("surname", SerialazedPerson);
+
+    console.log(JSON.parse(localStorage.getItem("surname")));*/
+    
+};
 
 
 
+
+
+
+
+
+
+
+
+//console.log(surname);
 
 
 
