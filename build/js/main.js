@@ -108,7 +108,7 @@ let arr = [89, 5, 76, 11];
     };
 
     //console.log(arr);
-
+/*
 //localStorage.setItem("number", 12);
 
 let form, surname, name, middle_name, position;
@@ -141,9 +141,9 @@ function get_elements_form() {
 
     localStorage.setItem("surname", SerialazedPerson);
 
-    console.log(JSON.parse(localStorage.getItem("surname")));*/
+    console.log(JSON.parse(localStorage.getItem("surname")));
     
-};
+}; */
 
 
 
