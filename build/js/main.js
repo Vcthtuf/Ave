@@ -144,19 +144,21 @@ function get_elements_form() {
     console.log(JSON.parse(localStorage.getItem("surname")));
     
 }; */
+let number;
+function first(number, callback) {
+    console.log(number);
+    
+    callback();
+    
+}
 
 
+first(128, second);
 
-
-
-
-
-
-
-
-
-//console.log(surname);
-
+function second(number) {
+    number = 190;
+    console.log(number);
+}
 
 
 
