@@ -98,69 +98,17 @@ let appData = {
     }
 };
 
-// start();
+//start();
 
-let arr = [89, 5, 76, 11];
-    let i = arr.sort(compareNum);
+let arr = [15, 7, 65, 23];
 
-    function compareNum(a,b) {
-        return a-b;
-    };
+let i = arr.sort(compire);
 
-    //console.log(arr);
-/*
-//localStorage.setItem("number", 12);
+function compire(a,b) {
+    return a-b;
+}
 
-let form, surname, name, middle_name, position;
-
-//let input_submit = document.getElementById('submit');
-
-let person = {};
-
-
-function get_elements_form() {
-
-    surname = document.getElementById('surname').value;
-
-    name = document.getElementById('name').value;
-
-    middle_name = document.getElementById('middle_name').value;
-
-    position = document.getElementById('position').value;
-
-    //write_person(surname, name, middle_name, position)();
-
-    person['surname'] = surname;
-    alert(surname);
-
-    
-    
-    return person
-
-   /* let SerialazedPerson = JSON.stringify(person);
-
-    localStorage.setItem("surname", SerialazedPerson);
-
-    console.log(JSON.parse(localStorage.getItem("surname")));
-    
-}; */
-
-
-
-
-
-
-
-
-
-
-
-//console.log(surname);
-
-
-
-
-
+console.log(arr);
 
 
 
