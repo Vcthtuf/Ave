@@ -100,15 +100,26 @@ let appData = {
 
 //start();
 
-let arr = [15, 7, 65, 23];
+let currency = document.getElementById('Currency'),
+    links = document.getElementsByTagName('a'),
+   // surname = document.getElementsByClassName('menu'),
+    link = document.querySelectorAll('.menu');
 
-let i = arr.sort(compire);
 
-function compire(a,b) {
-    return a-b;
-}
+currency.style.backgroundColor = 'purple';
 
-console.log(arr);
+//links[3].style.color = 'red';
+
+/*for (let i = 0; i < surname.length; i++) {
+    surname[i].style.color = 'green';
+    surname[i].style.fontWeight = '700';
+}*/
+
+link.forEach(function(item) {
+    item.style.color = 'darkblue';
+    item.style.fontWeight = '800';
+    item.style.fontSize = '1.2rem';
+});
 
 
 

@@ -8,14 +8,14 @@ head
     title Ave
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet")
     link(rel="stylesheet", type="text/css", href="fonts/font-awesome.min.css")
-    link(rel="stylesheet" href="main.css")
+    link(rel="stylesheet" href="css/main.css")
 body
     header
         .top-bar
             .container
                 .currency
                     .text Currency :
-                    select(name="#")
+                    select(name="#" id="Currency")
                         option(value="GBP" selected) GBP
                         option(value="USD") USD
                         option(value="EUR") EUR
@@ -39,16 +39,15 @@ body
                 .nav
                     ul
                         li
-                            a(href="") mens
-                            
+                            a.menu(href="") mens                     
                         li
-                            a(href="") womens
+                            a.menu(href="") womens
                         li
-                            a(href="") the brand
+                            a.menu(href="") the brand
                         li
-                            a(href="") local stores
+                            a.menu(href="") local stores
                         li
-                            a(href="") look book
+                            a.menu(href="") look book
                 .search
                     form(action="get")
                         input(type="search", placeholder="Search..")

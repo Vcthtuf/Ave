@@ -36,7 +36,7 @@ gulp.task('less',function(){
         }))
         .pipe(gp.csso({}))
         .pipe(gp.sourcemaps.write())
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('watch',function(){
