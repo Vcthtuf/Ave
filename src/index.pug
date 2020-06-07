@@ -21,7 +21,7 @@ body
                         option(value="EUR") EUR
                         option(value="RUR") RUR
                 .register
-                    a(href="register.html") Register
+                    a#register(href="Register.html") Register
                     a(href="SignIn.html") Sign In
                 .basket
                     i(class="fas fa-shopping-cart")
@@ -33,15 +33,15 @@ body
         .slider          
             .header_top
                 .logo
-                    a.logo 
+                    a.logo#logo 
                         strong avenue &nbsp;
                         span fashion
                 .nav
                     ul
                         li
-                            a.menu(href="") mens                     
+                            a.menu#mens(href="") mens                     
                         li
-                            a.menu(href="") womens
+                            a.menu#womens(href="") womens
                         li
                             a.menu(href="") the brand
                         li
@@ -61,7 +61,7 @@ body
         input.text#name(type="text" placeholder="Введите имя")
         input.text#middle_name(type="text" placeholder="Введите отчество")
         input.text#position(type="text" placeholder="Введите должность")
-        input.submit#submit(type="submit" value="Запомнить" onclick="get_elements_form()")
+        input.submit#submit(type="submit" value="Запомнить")
     script(src="js/main.js")
 
                                    

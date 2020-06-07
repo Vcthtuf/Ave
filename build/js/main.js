@@ -99,18 +99,18 @@ let appData = {
 };
 
 //start();
-
+/*
 let currency = document.getElementById('Currency'),
     links = document.getElementsByTagName('a'),
-   // surname = document.getElementsByClassName('menu'),
-    link = document.querySelectorAll('.menu');
+   // surname = document.getElementsByClassName('menu'), */
+ let   link = document.querySelectorAll('.menu');
 
-
+/*
 currency.style.backgroundColor = 'purple';
 
 //links[3].style.color = 'red';
 
-/*for (let i = 0; i < surname.length; i++) {
+for (let i = 0; i < surname.length; i++) {
     surname[i].style.color = 'green';
     surname[i].style.fontWeight = '700';
 }*/
@@ -119,7 +119,30 @@ link.forEach(function(item) {
     item.style.color = 'darkblue';
     item.style.fontWeight = '800';
     item.style.fontSize = '1.2rem';
+    item.addEventListener('click', function(event){
+        event.preventDefault();
+        let target = event.target;
+        target.style.display = 'none';
+    });
 });
+
+/*
+let logo = document.getElementById('logo');
+
+logo.addEventListener('click', function(event){
+    let target = event.target;
+    target.style.display = 'none';
+    alert('Произошло событие ' + event.type + ' на элементе '+ event.target);
+});
+
+let register = document.getElementById('register');
+
+register.addEventListener('click', function(event){
+    event.preventDefault();
+    alert('Произошло событие ' + event.type + ' на элементе '+ event.target);
+});*/
+
+
 
 
 
