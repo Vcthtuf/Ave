@@ -2,16 +2,26 @@
 
 let money, time;
 
-function start() {    // Запрос бюджета на месяц и даты, добавление в объект 'appData'
-    money = +prompt('Ваш бюджет на месяц?', '');
+let budgetMonth = document.getElementById('budget_Month'),
+    buttonCalc = document.querySelector('.calc');
+
+
+
+
+buttonCalc.addEventListener('click', function(){
     time = prompt('Введите дату в формате YYYY-MM-DD', '2020-05-24');
+    money = +prompt('Ваш бюджет на месяц?', '');
+    
     while(isNaN(money) || money =='' || money == null) {
         money = +prompt('Ваш бюджет на месяц?', '');
     }
     appData.budget = money;
     appData.timeData = time;
-    return appData.budget;
-};
+    budgetMonth.textContent = money;
+
+})
+
+
 
 let appData = {
     budget: money,

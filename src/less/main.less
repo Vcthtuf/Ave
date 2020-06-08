@@ -1,18 +1,6 @@
 //@import url("normalize.css");
 
 @font-face {
-    font-family: Roboto;
-    src: url(fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: FontAwesome;
-    src: url(../fonts/Awesome/fontawesome-webfont.ttf);
-    src: url(../fonts/Awesome/fontawesome-webfont.woff);
-    src: url(../fonts/Awesome/fontawesome-webfont.woff2);
-}
-
-@font-face {
     font-family: Montserrat;
     src: url(../fonts/Montserrat-Regular.ttf);
 
@@ -23,289 +11,106 @@
 
 // === Variables ===
 
-@Roboto: Roboto, sans-serif;
-@FontAwesome: FontAwesome;
-@Montserrat: Montserrat, sans-serif;
-
-@bg-grey: #f8f8f8;
-@bg-white: #fff;
-@bg-black: #333333;
-
-// === / Variables ===
-
 * {
-    padding:0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body:before, body:after, div, nav, header, footer, ul, li, a, section {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0 auto;
-    max-width: 2050px;
-    font-family: @Montserrat;
-    font-size: 16px;
-    background-color: @bg-white;
-}
-
-li {
-   list-style-type: none;
-}
-
-
-a {
-    text-decoration: none;
-}
-
-a:hover, button:hover, option:hover, input[type=submit] {
+button:hover, a:hover {
     cursor: pointer;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+body {
+    background-color: #eeeeee;
+    font-family: Montserrat;
+    padding-top: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 10px;
 }
-
-select:focus {
-    outline: none;
-
-}
-
-.clear:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-// - styles for sections
 
 header {
+    margin-bottom: 40px;
 
-    margin-bottom: 5%;
+    h2 {
+        text-align: center;
+        color: green;
+        
+
+        span {
+            color: purple;
+        }
+    }
+}
+
+section {
+   
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .keeper {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        .input {
+            background-color: transparent;
+
+        }
+
+        .output {
+            background-color: #ffffff;
+           
+           
+            width: 50%;
+            margin-left: 20px;  
+
+            .budget {
+                display: flex;
+                font-weight: bold;
+                padding: 10px 10px;
+                
+
+                .budget_descr {
+                   width: 40%;
+                    text-align: left;
+                    margin-right: 20%;
+                    
+                }
+
+                .budget_Month {
+                    width: 40%;
+                    text-align: left;
+                }
+            }
+
+
+
+        }
+
+    }
+
+    button.calc {
+        border: none;
+        background-color: #aa11ff;
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: bold;
+        margin: 0 auto;
+        color: #fff;
+
+        
+    }
+
     
 
-    .top-bar {
-        background-color: @bg-black;
-
-        .container {
-            max-width: 1170px;  // 1170/2050
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            //padding: 16px 0;
-            //border-top: 1px solid black;
-            margin: 0 auto;  
-
-            .currency {
-                flex-grow: 5;
-                display: flex;
-                padding: 16px 0;
-                //margin-right: 58.11965811965812%;  // 680/1170
-                font-family: @Montserrat;
-                font-size: 13px;
-                color: #777777;
-
-                
-                select {
-                   
-                    font-size: 13px;
-                    color: #777777;
-                    background-color: transparent;
-                    border: none;
-
-                }
-            }
-
-            .register {
-                flex-grow: 1;
-                //display: inline;
-                padding: 14px 0 12px;
-                //margin-right: 6.837606837606838%; //  80/1170
-                font-size: 13px;
-                font-family: @Montserrat;
-                color: #999999;
-
-                a {
-                    font-size: 13px;
-                    font-family: "Montserrat";
-                    color: rgb(153, 153, 153);
-                }
-
-                a:first-child {
-                    margin-right: 30px;
-                }
-            }
-
-            .basket {
-                display: flex;
-                background-color: #00c8c8;
-                padding: 16px 20px;
-
-                i {
-                    font-family: @FontAwesome;
-                    font-size: 20px;
-                    color: rgb(255, 255, 255);
-                    background-color: transparent;
-                    margin-right: 22px;
-                }
-
-                i:hover {
-                    cursor: pointer;
-                }
-
-                select {
-                    background-color: transparent;
-                    border: none;
-                    font-size: 13px;
-                    color: rgb(255, 255, 255);
-
-                    option { 
-                    color: #777777;                    
-                        
-
-                    }
-
-                }
-
-                select:after {
-                    content: "asdfg"; //<i class="fas fa-angle-down"></i>";
-                }
-            }
-        }
-
-        @media screen and (max-width: 1200px) {
-                .container {
-                    padding: 0 20px;
-                }
-        }
-
-        @media screen and (max-width: 480px) {
-                .container {
-                    flex-direction: column;
-
-                    .currency, .register {
-                        margin-bottom: 15px;
-                    }
-                }
-        }
-    }
-
-    .slider {
-        background: url('../img/jpg/header_bg.jpg') top center/cover no-repeat;
-        padding: 0 137px;
-        //height: 500px;
-
-           
-        .header_top {
-            padding-top: 45px;
-            display: flex;
-            justify-content: space-between;
-            
-
-            .logo {
-                //flex-grow: 1;
-                font-size: 24px;
-                font-size: 24px;
-                font-family: "Montserrat";
-                color: rgb(34, 34, 34);
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-
-            .nav {
-                align-self: center;
-                width: 33.78378378378378%;  // 600/1776
-                flex-grow: 3;
-                
-                                
-                
-
-                ul {
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: stretch;
-
-                    li {
-                        padding: 0 50px;
-
-                        a {
-                            font-size: 13px;
-                            font-family: "Montserrat";
-                            color: #222222;
-                            text-transform: uppercase;
-                            line-height: 1.538;  
-                        }
-
-                        a:hover {
-                            color: #00c8c8;
-                        }
-                        
-                    }
-                    
-                    
-
-                    
-
-                    
-
-                }
-
-            }
-
-            .search {
-                //flex-grow: 1;
-                align-self: center;
-
-                input { 
-                    font-size: 13px;
-                    font-family: "Montserrat";
-                    color: rgb(152, 152, 152);
-                    line-height: 2.077;
-                    text-align: left;
-                    padding-left: 10px;;                          
-                }
-
-            }
-
-        }
-
-        .ave {
-            //display: inline-block;
-            //vertical-align: middle;
-            text-align: center;
-            margin: 0 auto;
-            font-size: 450px;
-            font-family: "Montserrat";
-            color: rgb(87, 81, 83);
-            font-weight: bold;
-            text-transform: uppercase; 
-            letter-spacing: 3rem;             
-        }
-    }
-}
-
-
-form {
-    font-size: 1.5em;
-
-    input.text{
-        padding: 5px 10px;
-        margin: 0 20px;
-
-
-    } 
-
-    input.submit {
-        padding: 5px 15px;
-        background-color: yellow;
-    }
 
 }
+
 
 
 

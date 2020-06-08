@@ -11,57 +11,24 @@ head
     link(rel="stylesheet" href="css/main.css")
 body
     header
-        .top-bar
-            .container
-                .currency
-                    .text Currency :
-                    select(name="#" id="Currency")
-                        option(value="GBP" selected) GBP
-                        option(value="USD") USD
-                        option(value="EUR") EUR
-                        option(value="RUR") RUR
-                .register
-                    a#register(href="Register.html") Register
-                    a(href="SignIn.html") Sign In
-                .basket
-                    i(class="fas fa-shopping-cart")
-                    select(name="#") 
-                        option(value="empty" selected) empty
-                        option(value="USD") ....
-                        option(value="EUR") abcd
-                        option(value="RUR") efgh
-        .slider          
-            .header_top
-                .logo
-                    a.logo#logo 
-                        strong avenue &nbsp;
-                        span fashion
-                .nav
-                    ul
-                        li
-                            a.menu#mens(href="") mens                     
-                        li
-                            a.menu#womens(href="") womens
-                        li
-                            a.menu(href="") the brand
-                        li
-                            a.menu(href="") local stores
-                        li
-                            a.menu(href="") look book
-                .search
-                    form(action="get")
-                        input(type="search", placeholder="Search..")
-                        button(type="submit", value="")
-                            i(class="fas fa-search" )
-            .ave A  V  E
-            .button
-                button shop men’s collection
-    form(name="person")
-        input.text#surname(type="text" name="surname" placeholder="Введите фамилию")
-        input.text#name(type="text" placeholder="Введите имя")
-        input.text#middle_name(type="text" placeholder="Введите отчество")
-        input.text#position(type="text" placeholder="Введите должность")
-        input.submit#submit(type="submit" value="Запомнить")
+        h2 money
+            span keeper
+    section
+        h2 Расчет дневного бюджета
+        h3 Введите обязательные расходы
+        .keeper
+            
+            .input
+
+            button.calc Начать расчет
+                
+
+            .output
+                .budget
+                    .budget_descr Доход:
+                    .budget_Month#budget_Month
+       
+    
     script(src="js/main.js")
 
                                    
