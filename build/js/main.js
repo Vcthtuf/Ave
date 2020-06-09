@@ -1,14 +1,11 @@
 "use strict"
 
-let money, time;
+let money, time, timeData;
 
 let budgetMonth = document.getElementById('budget_Month'),
-    buttonCalc = document.querySelector('.calc');
+    startBtn = document.getElementById('start');
 
-
-
-
-buttonCalc.addEventListener('click', function(){
+startBtn.addEventListener('click', function(){
     time = prompt('Введите дату в формате YYYY-MM-DD', '2020-05-24');
     money = +prompt('Ваш бюджет на месяц?', '');
     
@@ -18,7 +15,7 @@ buttonCalc.addEventListener('click', function(){
     appData.budget = money;
     appData.timeData = time;
     budgetMonth.textContent = money;
-
+    timeData = new Date(parse)
 })
 
 
