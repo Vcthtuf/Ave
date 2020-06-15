@@ -1,7 +1,7 @@
 //@import url("normalize.css");
 
 @font-face {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     src: url(../fonts/Montserrat-Regular.ttf);
 
     // Light-300
@@ -11,106 +11,141 @@
 
 // === Variables ===
 
+@Montserrat: 'Montserrat', sans-serif;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.container {
+    width: 1166px;
+    margin: 0 auto;
+    
+}
+
 button:hover, a:hover {
     cursor: pointer;
 }
 
+select:active, select:focus {
+    outline: none; 
+}
+
+html {
+    font-family: @Montserrat;
+}
+
 body {
-    background-color: #eeeeee;
-    font-family: Montserrat;
-    padding-top: 30px;
-    max-width: 1200px;
+    max-width: 2050px;
     margin: 0 auto;
-    font-size: 10px;
 }
 
 header {
-    margin-bottom: 40px;
 
-    h2 {
-        text-align: center;
-        color: green;
-        
-
-        span {
-            color: purple;
-        }
-    }
-}
-
-section {
-   
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .keeper {
-        width: 80%;
-        margin: 0 auto;
+    .topbar {
+        background-color: #333333;
+        height: 45px;
         display: flex;
-        justify-content: center;
+        align-items: center;
 
-        .input {
-            background-color: transparent;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
 
-        }
+            .currency {
+               // align-self: center;
+                font-size: 13px;
+                //font-family: "Montserrat";
+                font-weight: normal;
+                color: rgb(119, 119, 119);
+                margin-right: 694px;
 
-        .output {
-            background-color: #ffffff;
-           
-           
-            width: 50%;
-            margin-left: 20px;  
+                select {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 13px;
+                    //font-family: "Montserrat";
+                    font-weight: normal;
+                    color: rgb(119, 119, 119);
 
-            .budget {
-                display: flex;
-                font-weight: bold;
-                padding: 10px 10px;
-                
 
-                .budget_descr {
-                   width: 40%;
-                    text-align: left;
-                    margin-right: 20%;
-                    
+                    option {
+                        border: none;
+                        font-size: 13px;
+                        //font-family: "Montserrat";
+                        font-weight: normal;
+                        color: rgb(119, 119, 119);
+                        
+                    }
+
                 }
+   
+            }
 
-                .budget_Month {
-                    width: 40%;
-                    text-align: left;
+            .register {
+                margin-right: 25px;
+
+                a {
+                    font-size: 13px;
+                    //font-family: "Montserrat";
+                    color: rgb(153, 153, 153); 
+                }     
+            }
+
+            .sign_in {
+                margin-right: 82px;
+
+                a {
+                    font-size: 13px;
+                    //font-family: "Montserrat";
+                    color: rgb(153, 153, 153);  
+                }    
+            }
+
+            .cart {
+
+                width: 144px;
+                background-color: #00c8c8;
+                align-self: stretch;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .empty {
+                    
+                    
+                    //font-family: "Montserrat";
+                    ; 
+                    
+                    select {
+                        border: none;
+                        background-color: transparent;
+                        font-size: 13px;
+                        //font-family: "Montserrat";
+                        font-weight: normal;
+                        color: #fff;
+    
+    
+                        option {
+                            font-size: 13px;
+                            border: none;
+                            //font-family: "Montserrat";
+                            font-weight: normal;
+                            color: rgb(119, 119, 119);
+                            
+                        }
+                    }
                 }
             }
 
 
-
         }
-
     }
-
-    button#start {
-        border: none;
-        background-color: #aa11ff;
-        padding: 5px 10px;
-        font-size: 10px;
-        font-weight: bold;
-        margin: 0 auto;
-        color: #fff;
-
-        
-    }
-
-    
-
-
 }
-
 
 
 

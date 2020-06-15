@@ -3,33 +3,35 @@ html(lang="en")
 head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="description" content="Clothing store")
     meta(name="author" content="Melnikov Sergey")
     title Ave
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet")
     link(rel="stylesheet", type="text/css", href="fonts/font-awesome.min.css")
+    link(rel="stylesheet", href="css/normalize.css")
     link(rel="stylesheet" href="css/main.css")
 body
-    header
-        h2 money
-            span keeper
-    section
-        h2 Расчет дневного бюджета
-        h3 Введите обязательные расходы
-        .keeper
-            
-            .input
-
-            button#start Начать расчет
-                
-
-            .output
-                .budget
-                    .budget_descr Доход:
-                    .budget_Month#budget_Month
-       
-    
-    script(src="js/main.js")
+    header.header
+        .topbar
+            .container
+                .currency Currency
+                    select(name="currency")
+                        option(value="GBP" selected) GBP
+                        option(value="USD") USD
+                        option(value="RUR") RUR
+                .register
+                    a(href="#") Register
+                .sign_in 
+                    a(href="#") Sign In
+                .cart
+                    .icon
+                    .empty
+                        select(name="empty")
+                            option(value="empty" selected) empty
+                            option(value="none") none
+                            option(value="no_empty") sdfv
+        
 
                                    
 
