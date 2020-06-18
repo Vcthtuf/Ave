@@ -9,9 +9,26 @@
     // Bold - 700
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+
+    // Light-300
+    // Regular - 400
+    // Bold - 700
+}
+
 // === Variables ===
 
 @Montserrat: 'Montserrat', sans-serif;
+@Roboto: 'Roboto', sans-serif;
+
+/*
+Think - 100;
+Light: 300;
+ Regular - 400;
+ Bold - 700;
+*/
 
 * {
     padding: 0;
@@ -21,8 +38,7 @@
 
 .container {
     width: 1166px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
 
 button:hover, a:hover {
@@ -35,6 +51,7 @@ select:active, select:focus {
 
 html {
     font-family: @Montserrat;
+    font-weight: 400;
 }
 
 body {
@@ -59,31 +76,20 @@ header {
             .currency {
                 width: 134px;
                 font-size: 13px;
-                //font-family: "Montserrat";
-                font-weight: normal;
                 color: rgb(119, 119, 119);
                 margin-right: 694px;
 
                 select {
                     border: none;
                     background-color: transparent;
-                    font-size: 13px;
-                    //font-family: "Montserrat";
-                    font-weight: normal;
                     color: rgb(119, 119, 119);
-
 
                     option {
                         border: none;
-                        font-size: 13px;
-                        //font-family: "Montserrat";
-                        font-weight: normal;
-                        color: rgb(119, 119, 119);
-                        
+                        font-family: @Montserrat;
+                        font-weight: 400;    
                     }
-
                 }
-   
             }
 
             .register {
@@ -91,7 +97,6 @@ header {
 
                 a {
                     font-size: 13px;
-                    //font-family: "Montserrat";
                     color: rgb(153, 153, 153); 
                 }     
             }
@@ -102,13 +107,11 @@ header {
 
                 a {
                     font-size: 13px;
-                    //font-family: "Montserrat";
                     color: rgb(153, 153, 153);  
                 }    
             }
 
             .cart {
-
                 width: 144px;
                 background-color: #00c8c8;
                 align-self: stretch;
@@ -118,32 +121,22 @@ header {
 
                 .empty {
                     
-                    
-                    //font-family: "Montserrat";
-                    ; 
-                    
                     select {
                         border: none;
                         background-color: transparent;
                         font-size: 13px;
-                        //font-family: "Montserrat";
-                        font-weight: normal;
+                        font-family: @Montserrat;
+                        font-weight: 400;
                         color: #fff;
-    
-    
+
                         option {
                             font-size: 13px;
                             border: none;
-                            //font-family: "Montserrat";
-                            font-weight: normal;
-                            color: rgb(119, 119, 119);
-                            
+                            color: rgb(119, 119, 119);    
                         }
                     }
                 }
             }
-
-
         }
     }
 
@@ -162,22 +155,18 @@ header {
 
             .logo {
                 margin-right: 645px;
-                
-                
 
                 a {
-                    color: #222222;
-                    font-weight: bold;
+                    color: #222222; 
+                    font-weight: 700;
                     text-transform: uppercase; 
                     text-decoration: none;
                     font-size: 24px; 
-                    font-family: @Montserrat;          
-
+                             
                     span {
                         color: #222222;
-                        font-weight: normal;
+                        font-weight: 400;
                         font-size: 24px;
-                        font-family: @Montserrat;
                     }
                 }
             }
@@ -195,7 +184,8 @@ header {
 
                         a {
                             font-size: 13px;
-                            //font-family: "Montserrat";
+                            font-family: @Montserrat; 
+                            font-weight: 400;
                             color: #222222;
                             text-transform: uppercase;
                             text-decoration: none;
@@ -213,7 +203,8 @@ header {
                 input.search {
                     padding: 5px;
                     font-size: 13px;
-                    font-family: "Montserrat";
+                    font-family: @Montserrat; 
+                    font-weight: 300;
                     color: rgb(152, 152, 152);
                     text-align: left;
                     border: 1 px solid #e7e7e7;
@@ -229,12 +220,10 @@ header {
         .slider {
             padding-bottom: 122px;
             
-
             h1.slider_text {
                 font-size: 450px;
-                font-family: "Montserrat";
                 color: rgb(87, 81, 83);
-                font-weight: bold;
+                font-weight: 700;
                 text-transform: uppercase;
                 text-align: center;
                 letter-spacing: 6.5rem;
@@ -250,12 +239,18 @@ header {
                 width: 342px;
                 height: 59px;
                 font-size: 16px;
-                font-family: "Montserrat";
+                font-family: @Montserrat;
+                font-weight: 400;
                 color: rgb(69, 70, 71);
                 text-transform: uppercase;
                 text-align: center;
-                outline: none;
-                
+                outline: none;    
+            }
+
+            button:hover {
+                background-color: #00c8c8;
+                color: rgb(248, 248, 248);  
+                border: none;    
             }
         }
     }
@@ -288,6 +283,7 @@ section.items {
                         a {
                             font-size: 13px;
                             font-family: "Montserrat";
+                            font-weight: 400;
                             color: #727272;
                             text-transform: uppercase;
                             text-decoration: none;
@@ -393,7 +389,7 @@ section.lookbook {
 
         h2.title {
             font-family: @Montserrat;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 48px;
             color: #575153; 
             text-transform: uppercase;
@@ -407,7 +403,8 @@ section.lookbook {
         p.descr {
             margin-bottom: 30px;
             font-size: 15px;
-            font-family: "Roboto";
+            font-family: @Roboto;
+            font-weight: 400;
             color: rgb(114, 114, 114);
             line-height: 1.467;
             text-align: right;    
@@ -421,7 +418,8 @@ section.lookbook {
             width: 180px;
             height: 59px;
             font-size: 16px;
-            font-family: "Montserrat";
+            font-family: @Montserrat;
+            font-weight: 400;
             color: rgb(69, 70, 71);
             text-transform: uppercase;
             text-align: center;   
@@ -448,24 +446,22 @@ footer {
 
             h3 {
                 font-size: 13px;
-                font-family: "Montserrat";
+                font-family: @Montserrat;
+                font-weight: 400;
                 color: rgb(87, 81, 83);
                 text-transform: uppercase;
-                line-height: 1.538;
                 text-align: left;  
                 margin-bottom: 34px;  
             }
 
             li {
                 list-style-type: none;
-                margin-bottom: 12px;
-
-                
+                margin-bottom: 12px;   
             }
 
             a, .office, .phone, .mail {
                 font-size: 14px;
-                font-family: "Montserrat";
+                font-family: @Montserrat;
                 font-weight: 300;
                 color: rgb(114, 114, 114);
                 text-align: left;  
@@ -488,26 +484,22 @@ footer {
         justify-content: space-between;
         margin-bottom: 56px;
         
-
         .banner {
             width: 570px;
             padding: 62px 0 64px 0;
 
             .title {
                 font-size: 36px;
-                font-family: "Montserrat";
+                font-family: @Montserrat;
                 color: rgb(255, 255, 255);
-                font-weight: bold;
+                font-weight: 700;
                 text-transform: uppercase;
-                line-height: 1.333;
                 text-align: center; 
             }
 
             .text {
               font-weight: 300;  
-
             }
-        
         }
 
         .award {
@@ -522,6 +514,33 @@ footer {
 
 .copyright {
     background-color: #333333;
+    font-size: 13px;
+    font-family: @Montserrat;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    padding: 17px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .design_dev {
+
+            a {
+                text-decoration: none;
+                color:  rgb(153, 153, 153);
+            }
+
+            .design {
+                display: inline-block;
+            }
+
+            .dev {
+                display: inline-block;
+                margin-left: 35px;
+            }
+        }
+    }
 }
 
 
