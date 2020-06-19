@@ -26,11 +26,13 @@ body
                     a(href="#") Sign In
                 .cart
                     .icon
+                        <i class="fa fa-shopping-cart"></i>
                     .empty
                         select(name="empty")
                             option(value="empty" selected) empty
                             option(value="none") none
                             option(value="no_empty") sdfv
+                        <i class="fa fa-angle-down"></i>
         .header_main
             .header_top
                 .logo 
@@ -38,18 +40,33 @@ body
                 nav.header
                     ul.header_menu
                         li
-                            a(href="#") mens
+                            .wrap
+                                a(href="#") mens
+                                <i class="fa fa-angle-down"></i>
+                                .sub_nav
                         li
-                            a(href="#") womens
+                            .wrap
+                                a(href="#") womens
+                                <i class="fa fa-angle-down"></i>
+                                .sub_nav
                         li
-                            a(href="#") thr brand
+                            .wrap
+                                a(href="#") thr brand
+                                <i class="fa fa-angle-down"></i>
+                                .sub_nav
                         li
-                            a(href="#") local stories
+                            .wrap
+                                a(href="#") local stories
+                                <i class="fa fa-angle-down"></i>
+                                .sub_nav
                         li
-                            a(href="#") look book
+                            .wrap
+                                a(href="#") look book
+                                <i class="fa fa-angle-down"></i>
+                                .sub_nav
                 .search
                     input.search(type="text" placeholder="Search")
-                    img.search(src="", alt="")
+                    <i class="fa fa-search" aria-hidden="true"></i>
             .slider
                 h1.slider_text A  V  E 
                 button.header shop men’s collection 
@@ -172,10 +189,16 @@ body
                     .title
                         h2.title award winner
                         .text fashion awards 2016
-                .banner.social
-                    .fb
-                    .tw
-                    .insta
+                .banner.icons
+                    .social.wrapper
+                        .social.fb
+                            <i class="fa fa-facebook"></i>
+                        .social.tw
+                            <i class="fa fa-twitter"></i>
+                        .social.insta
+                            <i class="fa fa-instagram"></i>
+                        .social.pinterest
+                            <i class="fa fa-pinterest-p"></i>
         .copyright
             .container
                 .name © 2016 Avenue Fashion™

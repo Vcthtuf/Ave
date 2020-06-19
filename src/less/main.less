@@ -119,6 +119,14 @@ header {
                 justify-content: space-between;
                 align-items: center;
 
+                .icon {
+                    margin-left: 23px;
+                    font-size: 20px;
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    line-height: 1.8;                
+                }
+
                 .empty {
                     
                     select {
@@ -181,27 +189,70 @@ header {
 
                     li {
                         display: inline-block;
+                        //position: relative;
 
-                        a {
-                            font-size: 13px;
-                            font-family: @Montserrat; 
-                            font-weight: 400;
-                            color: #222222;
-                            text-transform: uppercase;
-                            text-decoration: none;
+                        .wrap {
+                            cursor: pointer;
+                            position: relative;
+
+                            a {
+                                font-size: 13px;
+                                font-family: @Montserrat; 
+                                font-weight: 400;
+                                color: #222222;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                margin-bottom: 13px;
+                            
+                            }
+
+                            
+
+                            i.fa-angle-down {
+                                /*position: absolute;
+                                top: 100%;
+                                left: 0%;*/
+                                display: block;
+                            }
+
+                            .sub_nav {
+                                position: absolute;
+                                top: 120%;
+                                left:0%;
+                                width: 467px;
+                                height: 500px;
+                                box-shadow: 0 0 20px rgba(0,0,0,0.5);
+                                display: none;
+                                background-color: #fff;
+                                
+                            }
                         }
 
-                        a:hover {
+
+
+                    }
+
+                    li:hover {
+                        color: #00c8c8;
+
+                        a {
                             color: #00c8c8;
+                        }
+
+                        .sub_nav {
+                            display: block;
+                            z-index: 10;
                         }
                     }
                 }
             }
 
             .search {
+                position: relative;
 
                 input.search {
                     padding: 5px;
+                    padding-top: 7px;
                     font-size: 13px;
                     font-family: @Montserrat; 
                     font-weight: 300;
@@ -211,8 +262,14 @@ header {
                     outline: none;
                 }
 
-                img.search {
-
+                i.fa-search {
+                    position: absolute;
+                    top: 50%;
+                    right: 9px;
+                    transform: translate(0,-50%);
+                    font-size: 14px;
+                    color: rgb(152, 152, 152);
+                    cursor: pointer;
                 }
             }
         }
@@ -232,6 +289,7 @@ header {
 
             button.header {
                 margin-left: 1388px;
+                padding-top: 8px;
                 border-style: solid;
                 border-width: 2px;
                 border-color: rgb(115, 115, 115);
@@ -417,6 +475,7 @@ section.lookbook {
             background-color: rgba(115, 115, 115, 0);
             width: 180px;
             height: 59px;
+            padding-top: 8px;
             font-size: 16px;
             font-family: @Montserrat;
             font-weight: 400;
@@ -506,8 +565,37 @@ footer {
             background-color: #333333;
         }
 
-        .social {
+        .banner.icons {
             background-color: #00c8c8;
+            position: relative;
+            
+
+            .social.wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+
+
+                .social {
+
+                    i.fa {
+                        font-size: 36px;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase; 
+                        margin-left: 50px;
+                        cursor: pointer;    
+                    }
+
+                    i.fa-facebook {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
     }
 }
