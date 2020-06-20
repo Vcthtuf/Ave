@@ -1,34 +1,42 @@
 //@import url("normalize.css");
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url(../fonts/Montserrat-Regular.ttf);
-
-    // Light-300
-    // Regular - 400
-    // Bold - 700
+    font-family: 'Montserrat_Regular';
+    src: url(../fonts/Montserrat/Montserrat-Regular.eot),
+         url(../fonts/Montserrat/Montserrat-Regular.ttf),
+         url(../fonts/Montserrat/Montserrat-Regular.woff);
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url(../fonts/Roboto-Regular.ttf);
+    font-family: 'Montserrat_Light';
+    src: url(../fonts/Montserrat/Montserrat-Light.eot),
+         url(../fonts/Montserrat/Montserrat-Light.ttf),
+         url(../fonts/Montserrat/Montserrat-Light.woff);
+}
 
-    // Light-300
-    // Regular - 400
-    // Bold - 700
+@font-face {
+    font-family: 'Montserrat_Bold';
+    src: url(../fonts/Montserrat/Montserrat-ExtraBold.eot),
+         url(../fonts/Montserrat/Montserrat-ExtraBold.ttf),
+        url(../fonts/Montserrat/Montserrat-ExtraBold.woff);
+}
+
+@font-face {
+    font-family: 'Roboto_Regular';
+    src: url(../fonts/Roboto/Roboto-Regular.eot),
+         url(../fonts/Roboto/Roboto-Regular.ttf),
+         url(../fonts/Roboto/Roboto-Regular.woff);
 }
 
 // === Variables ===
 
-@Montserrat: 'Montserrat', sans-serif;
-@Roboto: 'Roboto', sans-serif;
+@Montserrat_Regular: 'Montserrat_Refular', Arial, sans-serif;
+@Montserrat_Light: 'Montserrat_Light', Arial, sans-serif;
+@Montserrat_Bold: 'Montserrat_Bold', Arial, sans-serif;
+@Roboto_Regular: 'Roboto_Regular', Arial, sans-serif;
 
-/*
-Think - 100;
-Light: 300;
- Regular - 400;
- Bold - 700;
-*/
+
+// General styles
 
 * {
     padding: 0;
@@ -49,15 +57,13 @@ select:active, select:focus {
     outline: none; 
 }
 
-html {
-    font-family: @Montserrat;
-    font-weight: 400;
-}
-
 body {
     max-width: 2050px;
     margin: 0 auto;
+    font-family: @Montserrat_Regular;
 }
+
+//====== Styles for header =======
 
 header {
 
@@ -86,8 +92,7 @@ header {
 
                     option {
                         border: none;
-                        font-family: @Montserrat;
-                        font-weight: 400;    
+                        font-family: @Montserrat_Regular;    
                     }
                 }
             }
@@ -133,8 +138,7 @@ header {
                         border: none;
                         background-color: transparent;
                         font-size: 13px;
-                        font-family: @Montserrat;
-                        font-weight: 400;
+                        font-family: @Montserrat_Regular;
                         color: #fff;
 
                         option {
@@ -166,14 +170,14 @@ header {
 
                 a {
                     color: #222222; 
-                    font-weight: 700;
+                    font-family: @Montserrat_Bold;
                     text-transform: uppercase; 
                     text-decoration: none;
                     font-size: 24px; 
                              
                     span {
                         color: #222222;
-                        font-weight: 400;
+                        font-family: @Montserrat_Regular;
                         font-size: 24px;
                     }
                 }
@@ -189,24 +193,19 @@ header {
 
                     li {
                         display: inline-block;
-                        //position: relative;
 
                         .wrap {
-                            cursor: pointer;
                             position: relative;
 
                             a {
                                 font-size: 13px;
-                                font-family: @Montserrat; 
-                                font-weight: 400;
+                                font-family: @Montserrat_Regular; 
                                 color: #222222;
                                 text-transform: uppercase;
                                 text-decoration: none;
                                 margin-bottom: 13px;
                             
                             }
-
-                            
 
                             i.fa-angle-down {
                                 /*position: absolute;
@@ -221,19 +220,90 @@ header {
                                 left:0%;
                                 width: 467px;
                                 height: 500px;
-                                box-shadow: 0 0 20px rgba(0,0,0,0.5);
+                                padding: 30px;
+                                box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, 0.14);
                                 display: none;
-                                background-color: #fff;
+                                background-color: #fff;   
                                 
+                                .subnav_wrapper {
+                                    display: flex;
+                                    height: 100%;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+
+                                        .subnav_text {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            //margin-bottom: 62px;
+                                            flex-grow: 1;
+                                            width: 100%;
+
+                                            .subnav {
+                                                width: 100%;
+                                                .subnav_title {
+                                                    margin-bottom: 12px;
+
+                                                    h3 {
+                                                        font-size: 12px;
+                                                        font-family: @Montserrat_Regular;
+                                                        color: rgb(87, 81, 83);
+                                                        text-transform: uppercase;
+                                                        text-align: left;
+                                                    }
+                                                }
+
+                                                .subnav_links {
+                                                    ul.subnav {
+                                                        li {
+                                                            display: block;
+                                                            a {
+                                                                font-size: 14px;
+                                                                font-family: @Montserrat_Light;
+                                                                color: rgb(114, 114, 114);
+                                                                line-height: 2.143;
+                                                                text-align: left;
+                                                                text-transform: capitalize;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .subnav_banner {
+                                            
+                                            font-size: 36px;
+                                            color: rgb(255, 255, 255);
+                                            text-transform: uppercase;
+                                            line-height: 1.333;
+                                            text-align: center;
+                                            background-color: rgb(51, 51, 51);
+                                            padding: 62px 0;
+
+
+                                            h2 {
+                                                font-family: @Montserrat_Bold;
+                                                font-size: 36px;
+                                            }
+
+                                            span {
+                                                font-family: @Montserrat_Regular;
+                                                letter-spacing: 0.1rem;
+                                                font-size: 36px;
+                                            }
+                                        }
+                                }
                             }
-                        }
-
-
-
+                        }   
                     }
 
                     li:hover {
                         color: #00c8c8;
+                        cursor: pointer;
+
+                            .sub_nav {
+                                cursor: default;
+                            }
 
                         a {
                             color: #00c8c8;
@@ -241,7 +311,6 @@ header {
 
                         .sub_nav {
                             display: block;
-                            z-index: 10;
                         }
                     }
                 }
@@ -254,8 +323,7 @@ header {
                     padding: 5px;
                     padding-top: 7px;
                     font-size: 13px;
-                    font-family: @Montserrat; 
-                    font-weight: 300;
+                    font-family: @Montserrat_Light; 
                     color: rgb(152, 152, 152);
                     text-align: left;
                     border: 1 px solid #e7e7e7;
@@ -280,7 +348,7 @@ header {
             h1.slider_text {
                 font-size: 450px;
                 color: rgb(87, 81, 83);
-                font-weight: 700;
+                font-family: @Montserrat_Bold;
                 text-transform: uppercase;
                 text-align: center;
                 letter-spacing: 6.5rem;
@@ -289,7 +357,7 @@ header {
 
             button.header {
                 margin-left: 1388px;
-                padding-top: 8px;
+                line-height: 1rem;
                 border-style: solid;
                 border-width: 2px;
                 border-color: rgb(115, 115, 115);
@@ -297,8 +365,7 @@ header {
                 width: 342px;
                 height: 59px;
                 font-size: 16px;
-                font-family: @Montserrat;
-                font-weight: 400;
+                font-family: @Montserrat_Regular;
                 color: rgb(69, 70, 71);
                 text-transform: uppercase;
                 text-align: center;
@@ -313,6 +380,8 @@ header {
         }
     }
 }
+
+// ==== Styles for section "items" ====
 
 section.items {
     margin-bottom: 62px;
@@ -340,15 +409,14 @@ section.items {
 
                         a {
                             font-size: 13px;
-                            font-family: "Montserrat";
-                            font-weight: 400;
+                            font-family: @Montserrat_Regular;
                             color: #727272;
                             text-transform: uppercase;
                             text-decoration: none;
                             text-align: left;      
                         }
 
-                        a:active {
+                        a:hover {
                             color:  rgb(0, 200, 200);
                         }
                     }
@@ -365,19 +433,211 @@ section.items {
                 .item_left_top {
                     margin-bottom: 30px;
 
-                    img:first-child {
+                    .img {
+                        display: inline-block;
+                        position: relative;
+
+                        .price {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            font-size: 21px;
+                            font-family: @Montserrat_Light;
+                            color: rgb(154, 154, 154);
+                            text-transform: uppercase;                            
+                        }
+                        .btn_info {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fff;
+                            font-size: 48px;
+                            color: #b14c35;
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13);  
+                            text-align: center;
+                            border-radius: 50%; 
+                            display: none; 
+                        }
+
+                        .btn_info:hover {
+                            cursor: pointer;
+                        }
+
+                        .info_hover {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            width: 100%;
+                            text-align: center;
+                            background-color: #fff;
+                            z-index: 1;
+                            padding-top: 22px;
+                            padding-bottom: 17px;
+
+                            h3 {
+                                font-size: 13px;
+                                font-family: @Montserrat_Regular;
+                                color: rgb(114, 114, 114);
+                                text-transform: uppercase;  
+                                padding-bottom: 12px;
+                            }
+
+                            p {
+                                font-size: 15px;
+                                font-family: @Roboto_Regular;
+                                color: rgb(142, 140, 140); 
+                                margin-bottom: 15px;    
+                            }
+
+                            .icons {
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: space-between;
+                                width: 115px;
+
+                                .icon {
+                                    background-color: #727272;
+                                    border-radius: 50%;
+                                    padding: 8px;
+
+
+                                    i {
+                                        font-size: 17px;
+                                        color: rgb(255, 255, 255);
+                                        text-transform: uppercase;   
+                                    }
+                                }
+
+                                .icon:hover {
+                                    cursor: pointer;
+                                    background-color: #00c8c8;
+                                }
+                            }
+                        }
+                    }
+
+                    .img:first-child {
                         margin-right: 30px;
+                    }
+
+                    .img:hover {
+                        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+
+                        .btn_info, .info_hover {
+                            display: block;
+                        }
                     }
                 }
 
                 .item_left_bottom {
-                    background-color: #f8f8f8;  
+                    background-color: #f8f8f8; 
+                    position: relative; 
 
-                    img {
-                        display: block;
-                        margin: 0 auto;
+                    .img {
+                        display: inline-block;
+                        position: relative;
+
+                        .price {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            font-size: 21px;
+                            font-family: @Montserrat_Light;
+                            color: rgb(154, 154, 154);
+                            text-transform: uppercase;                            
+                        }
+                        .btn_info {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fff;
+                            font-size: 48px;
+                            color: #b14c35;
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13);  
+                            text-align: center;
+                            border-radius: 50%; 
+                            display: none; 
+                        }
+
+                        .btn_info:hover {
+                            cursor: pointer;
+                        }
+
+                        
                     }
 
+                    .info_hover {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        width: 100%;
+                        text-align: center;
+                        background-color: #fff;
+                        z-index: 1;
+                        padding-top: 22px;
+                        padding-bottom: 17px;
+
+                        h3 {
+                            font-size: 13px;
+                            font-family: @Montserrat_Regular;
+                            color: rgb(114, 114, 114);
+                            text-transform: uppercase;  
+                            padding-bottom: 12px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                            font-family: @Roboto_Regular;
+                            color: rgb(142, 140, 140); 
+                            margin-bottom: 15px;    
+                        }
+
+                        .icons {
+                            margin: 0 auto;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 115px;
+
+                            .icon {
+                                background-color: #727272;
+                                border-radius: 50%;
+                                padding: 8px;
+
+
+                                i {
+                                    font-size: 17px;
+                                    color: rgb(255, 255, 255);
+                                    text-transform: uppercase;   
+                                }
+                            }
+
+                            .icon:hover {
+                                cursor: pointer;
+                                background-color: #00c8c8;
+                            }
+                        }
+                    }
+
+                    
+
+                }
+
+                .item_left_bottom:hover {
+                    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+
+                    .info_hover {
+                        display: block;
+                    }
+
+                        .img .btn_info {
+                            display: block;
+                        }
                 }
             }
 
@@ -385,28 +645,222 @@ section.items {
 
                 .item_right_top {
                     margin-bottom: 30px; 
-                    background-color: #f8f8f8;  
+                    background-color: #f8f8f8; 
+                    position: relative; 
 
-                    img {
-                        display: block;
-                        margin: 0 auto;
+                    .img {
+                        display: inline-block;
+                        position: relative;
+
+                        .price {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            font-size: 21px;
+                            font-family: @Montserrat_Light;
+                            color: rgb(154, 154, 154);
+                            text-transform: uppercase;                            
+                        }
+                        .btn_info {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fff;
+                            font-size: 48px;
+                            color: #b14c35;
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13);  
+                            text-align: center;
+                            border-radius: 50%; 
+                            display: none; 
+                        }
+
+                        .btn_info:hover {
+                            cursor: pointer;
+                        }
+
+                        
+                        
+                        
                     }
+
+                    .info_hover {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        width: 100%;
+                        text-align: center;
+                        background-color: #fff;
+                        z-index: 1;
+                        padding-top: 22px;
+                        padding-bottom: 17px;
+
+                        h3 {
+                            font-size: 13px;
+                            font-family: @Montserrat_Regular;
+                            color: rgb(114, 114, 114);
+                            text-transform: uppercase;  
+                            padding-bottom: 12px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                            font-family: @Roboto_Regular;
+                            color: rgb(142, 140, 140); 
+                            margin-bottom: 15px;    
+                        }
+
+                        .icons {
+                            margin: 0 auto;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 115px;
+
+                            .icon {
+                                background-color: #727272;
+                                border-radius: 50%;
+                                padding: 8px;
+
+
+                                i {
+                                    font-size: 17px;
+                                    color: rgb(255, 255, 255);
+                                    text-transform: uppercase;   
+                                }
+                            }
+
+                            .icon:hover {
+                                cursor: pointer;
+                                background-color: #00c8c8;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+                .item_right_top:hover {
+                    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+
+                    .info_hover {
+                        display: block;
+                    }
+
+                        .img .btn_info {
+                            display: block;
+                        }
+
+
                 }
 
                 .item_right_bottom {
 
-                    img:first-child {
+                    .img {
+                        display: inline-block;
+                        position: relative;
+
+                        .price {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            font-size: 21px;
+                            font-family: @Montserrat_Light;
+                            color: rgb(154, 154, 154);
+                            text-transform: uppercase;                            
+                        }
+                        .btn_info {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fff;
+                            font-size: 48px;
+                            color: #b14c35;
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13);  
+                            text-align: center;
+                            border-radius: 50%; 
+                            display: none; 
+                        }
+
+                        .btn_info {
+                            cursor: pointer;
+                        }
+
+                        .info_hover {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            width: 100%;
+                            text-align: center;
+                            background-color: #fff;
+                            z-index: 1;
+                            padding-top: 22px;
+                            padding-bottom: 17px;
+
+                            h3 {
+                                font-size: 13px;
+                                font-family: @Montserrat_Regular;
+                                color: rgb(114, 114, 114);
+                                text-transform: uppercase;  
+                                padding-bottom: 12px;
+                            }
+
+                            p {
+                                font-size: 15px;
+                                font-family: @Roboto_Regular;
+                                color: rgb(142, 140, 140); 
+                                margin-bottom: 15px;    
+                            }
+
+                            .icons {
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: space-between;
+                                width: 115px;
+
+                                .icon {
+                                    background-color: #727272;
+                                    border-radius: 50%;
+                                    padding: 8px;
+
+
+                                    i {
+                                        font-size: 17px;
+                                        color: rgb(255, 255, 255);
+                                        text-transform: uppercase;   
+                                    }
+                                }
+
+                                .icon:hover {
+                                    cursor: pointer;
+                                    background-color: #00c8c8;
+                                }
+                            }
+                        }
+                    }
+
+                    .img:first-child {
                         margin-right: 30px;
                     }
-                }
-            }
 
-            img:hover {
-                cursor: pointer;
+                    .img:hover {
+                        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+
+                        .btn_info, .info_hover {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+// ==== Styles for section "lookbook" ====
 
 section.lookbook {
     display: flex;
@@ -446,23 +900,21 @@ section.lookbook {
         text-align: right;
 
         h2.title {
-            font-family: @Montserrat;
-            font-weight: 700;
+            font-family: @Montserrat_Bold;
             font-size: 48px;
             color: #575153; 
             text-transform: uppercase;
             margin-bottom: 30px;
     
             span {
-                font-weight: 300;
+                font-family: @Montserrat_Light;
             }
         }
 
         p.descr {
             margin-bottom: 30px;
             font-size: 15px;
-            font-family: @Roboto;
-            font-weight: 400;
+            font-family: @Roboto_Regular;
             color: rgb(114, 114, 114);
             line-height: 1.467;
             text-align: right;    
@@ -475,10 +927,9 @@ section.lookbook {
             background-color: rgba(115, 115, 115, 0);
             width: 180px;
             height: 59px;
-            padding-top: 8px;
+            line-height: 1rem;
             font-size: 16px;
-            font-family: @Montserrat;
-            font-weight: 400;
+            font-family: @Montserrat_Regular;
             color: rgb(69, 70, 71);
             text-transform: uppercase;
             text-align: center;   
@@ -491,6 +942,8 @@ section.lookbook {
         }
     }  
 }
+
+// ==== Styles for footer ====
 
 footer {
     background-color: #f8f8f8;
@@ -505,8 +958,7 @@ footer {
 
             h3 {
                 font-size: 13px;
-                font-family: @Montserrat;
-                font-weight: 400;
+                font-family: @Montserrat_Regular;
                 color: rgb(87, 81, 83);
                 text-transform: uppercase;
                 text-align: left;  
@@ -520,11 +972,15 @@ footer {
 
             a, .office, .phone, .mail {
                 font-size: 14px;
-                font-family: @Montserrat;
-                font-weight: 300;
+                font-family: @Montserrat_Light;
                 color: rgb(114, 114, 114);
                 text-align: left;  
                 text-decoration: none;   
+            }
+
+            a:hover {
+                color: #00c8c8;
+                font-weight: 500;
             }
 
             .office {
@@ -549,15 +1005,14 @@ footer {
 
             .title {
                 font-size: 36px;
-                font-family: @Montserrat;
+                font-family: @Montserrat_Bold;
                 color: rgb(255, 255, 255);
-                font-weight: 700;
                 text-transform: uppercase;
                 text-align: center; 
             }
 
             .text {
-              font-weight: 300;  
+              font-family: @Montserrat_Light;  
             }
         }
 
@@ -600,11 +1055,12 @@ footer {
     }
 }
 
+// ==== Styles for section "copyright" ====
+
 .copyright {
     background-color: #333333;
     font-size: 13px;
-    font-family: @Montserrat;
-    font-weight: 400;
+    font-family: @Montserrat_Regular;
     color: rgb(153, 153, 153);
     padding: 17px 0;
 
