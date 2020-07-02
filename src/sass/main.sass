@@ -1,0 +1,793 @@
+//$import url("normalize.css")
+
+@import 'fonts'
+@import 'variables'
+
+// === Variables ===
+
+
+
+
+// General styles
+
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: $Montserrat
+    font-size: 15px
+
+body 
+    max-width: 2050px
+    width: 100%
+    margin: 0 auto
+
+.container 
+    max-width: 1170px
+    margin: 0 auto    
+
+button:hover, a:hover 
+    cursor: pointer
+
+select:active, select:focus, input:focus, textarea:focus, button:focus
+    outline: none
+    outline-offset: none 
+
+a
+    text-decoration: none
+
+a, button
+    cursor: pointer
+
+ul
+    list-style-type: none
+
+
+//====== Styles for header =======
+
+@import 'header'          
+     
+
+.slider 
+    background: url('../img/bg/slider_img_one.jpg') center center/cover no-repeat
+    padding-bottom: 122px
+    
+    h1.slider_text 
+        font-size: 450px
+        color: rgb(87, 81, 83)
+        font-family: $Montserrat
+        text-transform: uppercase
+        text-align: center
+        letter-spacing: 6.5rem
+        margin-bottom: 123px    
+    
+
+    button.header 
+        margin-left: 1388px
+        line-height: 1rem
+        border-style: solid
+        border-width: 2px
+        border-color: rgb(115, 115, 115)
+        background-color: rgba(115, 115, 115, 0)
+        width: 342px
+        height: 59px
+        font-size: 16px
+        font-family: $Montserrat
+        color: rgb(69, 70, 71)
+        text-transform: uppercase
+        text-align: center
+        outline: none    
+    
+
+    button:hover 
+        background-color: #00c8c8
+        color: rgb(248, 248, 248)  
+        border: none    
+            
+        
+    
+
+
+// ==== Styles for section "items" ====
+
+section.items 
+    margin-bottom: 62px
+
+    .container 
+        width: 1770px
+        border-top: 1px solid rgb(238, 238, 238)
+        border-bottom: 1px solid rgb(238, 238, 238)
+        padding-top: 55px
+        padding-bottom: 62px
+           
+        .items_menu 
+            margin-bottom: 62px
+
+            nav.items 
+
+                ul.items 
+                    width: 692px
+                    display: flex
+                    justify-content: space-between
+
+                    li 
+                        list-style-type: none
+                        
+
+                        a 
+                            font-size: 13px
+                            font-family: $Montserrat
+                            color: #727272
+                            text-transform: uppercase
+                            text-decoration: none
+                            text-align: left      
+                        
+
+                        a:hover 
+                            color:  rgb(0, 200, 200)
+                        
+                    
+                
+            
+        
+
+        .items_wrapper 
+            display: flex
+            justify-content: space-between
+
+            .item_left 
+
+                .item_left_top 
+                    margin-bottom: 30px
+
+                    .img 
+                        display: inline-block
+                        position: relative
+
+                        .price 
+                            position: absolute
+                            top: 15px
+                            left: 15px
+                            font-size: 21px
+                            font-family: $Montserrat
+                            color: rgb(154, 154, 154)
+                            text-transform: uppercase                            
+                        
+                        .btn_info 
+                            position: absolute
+                            top: 60%
+                            left: 50%
+                            transform: translate(-50%, 0)
+                            width: 50px
+                            height: 50px
+                            background-color: #fff
+                            font-size: 48px
+                            color: #b14c35
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13)  
+                            text-align: center
+                            border-radius: 50% 
+                            display: none 
+                        
+
+                        .btn_info:hover 
+                            cursor: pointer
+                        
+
+                        .info_hover 
+                            display: none
+                            position: absolute
+                            top: 100%
+                            width: 100%
+                            text-align: center
+                            background-color: #fff
+                            z-index: 1
+                            padding-top: 22px
+                            padding-bottom: 17px
+
+                            h3 
+                                font-size: 13px
+                                font-family: $Montserrat
+                                color: rgb(114, 114, 114)
+                                text-transform: uppercase  
+                                padding-bottom: 12px
+                            
+
+                            p 
+                                font-size: 15px
+                                font-family: $Roboto
+                                color: rgb(142, 140, 140) 
+                                margin-bottom: 15px    
+                            
+
+                            .icons 
+                                margin: 0 auto
+                                display: flex
+                                justify-content: space-between
+                                width: 115px
+
+                                .icon 
+                                    background-color: #727272
+                                    border-radius: 50%
+                                    padding: 8px
+
+
+                                    i 
+                                        font-size: 17px
+                                        color: rgb(255, 255, 255)
+                                        text-transform: uppercase   
+                                    
+                                
+
+                                .icon:hover 
+                                    cursor: pointer
+                                    background-color: #00c8c8
+                                
+                            
+                        
+                    
+
+                    .img:first-child 
+                        margin-right: 30px
+                    
+
+                    .img:hover 
+                        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14)
+
+                        .btn_info, .info_hover 
+                            display: block
+                        
+                    
+                
+
+                .item_left_bottom 
+                    background-color: #f8f8f8 
+                    position: relative 
+
+                    .img 
+                        display: inline-block
+                        position: relative
+
+                        .price 
+                            position: absolute
+                            top: 15px
+                            left: 15px
+                            font-size: 21px
+                            font-family: $Montserrat
+                            color: rgb(154, 154, 154)
+                            text-transform: uppercase                            
+                        
+                        .btn_info 
+                            position: absolute
+                            top: 60%
+                            left: 50%
+                            transform: translate(-50%, 0)
+                            width: 50px
+                            height: 50px
+                            background-color: #fff
+                            font-size: 48px
+                            color: #b14c35
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13)  
+                            text-align: center
+                            border-radius: 50% 
+                            display: none 
+                        
+
+                        .btn_info:hover 
+                            cursor: pointer
+                        
+
+                        
+                    
+
+                    .info_hover 
+                        display: none
+                        position: absolute
+                        top: 100%
+                        width: 100%
+                        text-align: center
+                        background-color: #fff
+                        z-index: 1
+                        padding-top: 22px
+                        padding-bottom: 17px
+
+                        h3 
+                            font-size: 13px
+                            font-family: $Montserrat
+                            color: rgb(114, 114, 114)
+                            text-transform: uppercase  
+                            padding-bottom: 12px
+                        
+
+                        p 
+                            font-size: 15px
+                            font-family: $Roboto
+                            color: rgb(142, 140, 140) 
+                            margin-bottom: 15px    
+                        
+
+                        .icons 
+                            margin: 0 auto
+                            display: flex
+                            justify-content: space-between
+                            width: 115px
+
+                            .icon 
+                                background-color: #727272
+                                border-radius: 50%
+                                padding: 8px
+
+
+                                i 
+                                    font-size: 17px
+                                    color: rgb(255, 255, 255)
+                                    text-transform: uppercase   
+                                
+                            
+
+                            .icon:hover 
+                                cursor: pointer
+                                background-color: #00c8c8
+    
+
+                .item_left_bottom:hover 
+                    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14)
+
+                    .info_hover 
+                        display: block
+                    
+
+                        .img .btn_info 
+                            display: block
+                        
+                
+            
+
+            .item_right 
+
+                .item_right_top 
+                    margin-bottom: 30px 
+                    background-color: #f8f8f8 
+                    position: relative 
+
+                    .img 
+                        display: inline-block
+                        position: relative
+
+                        .price 
+                            position: absolute
+                            top: 15px
+                            left: 15px
+                            font-size: 21px
+                            font-family: $Montserrat
+                            color: rgb(154, 154, 154)
+                            text-transform: uppercase                            
+                        
+                        .btn_info 
+                            position: absolute
+                            top: 60%
+                            left: 50%
+                            transform: translate(-50%, 0)
+                            width: 50px
+                            height: 50px
+                            background-color: #fff
+                            font-size: 48px
+                            color: #b14c35
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13)  
+                            text-align: center
+                            border-radius: 50% 
+                            display: none 
+                        
+
+                        .btn_info:hover 
+                            cursor: pointer
+                        
+
+                        
+                        
+                        
+                    
+
+                    .info_hover 
+                        display: none
+                        position: absolute
+                        top: 100%
+                        width: 100%
+                        text-align: center
+                        background-color: #fff
+                        z-index: 1
+                        padding-top: 22px
+                        padding-bottom: 17px
+
+                        h3 
+                            font-size: 13px
+                            font-family: $Montserrat
+                            color: rgb(114, 114, 114)
+                            text-transform: uppercase  
+                            padding-bottom: 12px
+                        
+
+                        p 
+                            font-size: 15px
+                            font-family: $Roboto
+                            color: rgb(142, 140, 140) 
+                            margin-bottom: 15px    
+                        
+
+                        .icons 
+                            margin: 0 auto
+                            display: flex
+                            justify-content: space-between
+                            width: 115px
+
+                            .icon 
+                                background-color: #727272
+                                border-radius: 50%
+                                padding: 8px
+
+
+                                i 
+                                    font-size: 17px
+                                    color: rgb(255, 255, 255)
+                                    text-transform: uppercase   
+                                
+                            
+
+                            .icon:hover 
+                                cursor: pointer
+                                background-color: #00c8c8
+                            
+                        
+                    
+
+                    
+                
+
+                .item_right_top:hover 
+                    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14)
+
+                    .info_hover 
+                        display: block
+                    
+
+                        .img .btn_info 
+                            display: block
+                        
+
+
+                
+
+                .item_right_bottom 
+
+                    .img 
+                        display: inline-block
+                        position: relative
+
+                        .price 
+                            position: absolute
+                            top: 15px
+                            left: 15px
+                            font-size: 21px
+                            font-family: $Montserrat
+                            color: rgb(154, 154, 154)
+                            text-transform: uppercase                            
+                        
+                        .btn_info 
+                            position: absolute
+                            top: 60%
+                            left: 50%
+                            transform: translate(-50%, 0)
+                            width: 50px
+                            height: 50px
+                            background-color: #fff
+                            font-size: 48px
+                            color: #b14c35
+                            text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.13)  
+                            text-align: center
+                            border-radius: 50% 
+                            display: none 
+                        
+
+                        .btn_info 
+                            cursor: pointer
+                        
+
+                        .info_hover 
+                            display: none
+                            position: absolute
+                            top: 100%
+                            width: 100%
+                            text-align: center
+                            background-color: #fff
+                            z-index: 1
+                            padding-top: 22px
+                            padding-bottom: 17px
+
+                            h3 
+                                font-size: 13px
+                                font-family: $Montserrat
+                                color: rgb(114, 114, 114)
+                                text-transform: uppercase  
+                                padding-bottom: 12px
+                            
+
+                            p 
+                                font-size: 15px
+                                font-family: $Roboto
+                                color: rgb(142, 140, 140) 
+                                margin-bottom: 15px    
+                            
+
+                            .icons 
+                                margin: 0 auto
+                                display: flex
+                                justify-content: space-between
+                                width: 115px
+
+                                .icon 
+                                    background-color: #727272
+                                    border-radius: 50%
+                                    padding: 8px
+
+
+                                    i 
+                                        font-size: 17px
+                                        color: rgb(255, 255, 255)
+                                        text-transform: uppercase   
+                                    
+                                
+
+                                .icon:hover 
+                                    cursor: pointer
+                                    background-color: #00c8c8
+                                
+                            
+                        
+                    
+
+                    .img:first-child 
+                        margin-right: 30px
+                    
+
+                    .img:hover 
+                        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14)
+
+                        .btn_info, .info_hover 
+                            display: block
+                        
+                    
+                
+            
+        
+    
+
+
+// ==== Styles for section "lookbook" ====
+
+section.lookbook 
+    display: flex
+    justify-content: space-between
+    margin-bottom: 123px
+
+    .men 
+        width: 663px
+        background: url('../img/bg/lookbook_man.jpg') center center/cover no-repeat
+        padding-top: 98px
+        padding-bottom: 142px
+
+    
+    .women 
+        width: 663px
+        background: url('../img/bg/lookbook_women.jpg') center center/cover no-repeat
+        padding-top: 98px
+        padding-bottom: 142px
+
+
+
+    
+
+    .your 
+        width: 663px
+        background: url('../img/bg/lookbook_you.jpg') center center/cover no-repeat
+        padding-top: 98px
+        padding-bottom: 142px
+
+
+
+    
+
+    .wrapper 
+        margin-left: 298px
+        margin-right: 54px
+        text-align: right
+
+        h2.title 
+            font-family: $Montserrat
+            font-size: 48px
+            color: #575153 
+            text-transform: uppercase
+            margin-bottom: 30px
+    
+            span 
+                font-family: $Montserrat
+            
+        
+
+        p.descr 
+            margin-bottom: 30px
+            font-size: 15px
+            font-family: $Roboto
+            color: rgb(114, 114, 114)
+            line-height: 1.467
+            text-align: right    
+        
+
+        button 
+            border-style: solid
+            border-width: 2px
+            border-color: rgb(115, 115, 115)
+            background-color: rgba(115, 115, 115, 0)
+            width: 180px
+            height: 59px
+            line-height: 1rem
+            font-size: 16px
+            font-family: $Montserrat
+            color: rgb(69, 70, 71)
+            text-transform: uppercase
+            text-align: center   
+        
+
+        button:hover 
+            background-color: #00c8c8
+            color: rgb(248, 248, 248)  
+            border: none    
+        
+      
+
+
+// ==== Styles for footer ====
+
+footer 
+    background-color: #f8f8f8
+    padding-top: 64px
+
+    .container 
+
+        .info 
+            display: flex
+            justify-content: space-between
+            margin-bottom: 62px
+
+            h3 
+                font-size: 13px
+                font-family: $Montserrat
+                color: rgb(87, 81, 83)
+                text-transform: uppercase
+                text-align: left  
+                margin-bottom: 34px  
+            
+
+            li 
+                list-style-type: none
+                margin-bottom: 12px   
+            
+
+            a, .office, .phone, .mail 
+                font-size: 14px
+                font-family: $Montserrat
+                color: rgb(114, 114, 114)
+                text-align: left  
+                text-decoration: none   
+            
+
+            a:hover 
+                color: #00c8c8
+                font-weight: 500
+            
+
+            .office 
+                margin-bottom: 26px
+                line-height: 1.429  
+            
+
+            .phone 
+                margin-bottom: 12px
+            
+        
+    
+
+    .banners 
+        display: flex
+        justify-content: space-between
+        margin-bottom: 56px
+        
+        .banner 
+            width: 570px
+            padding: 62px 0 64px 0
+
+            .title 
+                font-size: 36px
+                font-family: $Montserrat
+                color: rgb(255, 255, 255)
+                text-transform: uppercase
+                text-align: center 
+            
+
+            .text 
+              font-family: $Montserrat  
+            
+        
+
+        .award 
+            background-color: #333333
+        
+
+        .banner.icons 
+            background-color: #00c8c8
+            position: relative
+            
+
+            .social.wrapper 
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+
+
+                .social 
+
+                    i.fa 
+                        font-size: 36px
+                        color: rgb(255, 255, 255)
+                        text-transform: uppercase 
+                        margin-left: 50px
+                        cursor: pointer    
+                    
+
+                    i.fa-facebook 
+                        margin-left: 0
+                    
+                
+            
+        
+    
+
+
+// ==== Styles for section "copyright" ====
+
+.copyright 
+    background-color: #333333
+    font-size: 13px
+    font-family: $Montserrat
+    color: rgb(153, 153, 153)
+    padding: 17px 0
+
+    .container 
+        display: flex
+        justify-content: space-between
+
+        .design_dev 
+
+            a 
+                text-decoration: none
+                color:  rgb(153, 153, 153)
+            
+
+            .design 
+                display: inline-block
+            
+
+            .dev 
+                display: inline-block
+                margin-left: 35px
+            
+        
+
+
+
+
+
+

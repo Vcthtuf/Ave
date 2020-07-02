@@ -23,12 +23,12 @@ gulp.task('pug',function(){
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('less',function(){
-    return gulp.src('src/less/*.less')
+gulp.task('sass',function(){
+    return gulp.src('src/sass/*.sass')
         .pipe(gp.sourcemaps.init())
-        .pipe(gp.less({ }))
+        .pipe(gp.sass({ }))
         .pipe(gp.autoprefixer({
-            overrideBrowserslist: ['last 10 versions']
+            overrideBrowserslist: ['> 1%','last 2 versions']
             
         }))
         .on("error", gp.notify.onError(function (error) {
@@ -41,10 +41,10 @@ gulp.task('less',function(){
 
 gulp.task('watch',function(){
     gulp.watch('src/*.pug',gulp.series('pug'));
-    gulp.watch('src/less/*.less',gulp.series('less'));
+    gulp.watch('src/sass/*.sass',gulp.series('sass'));
 });
 
 gulp.task('default',gulp.series(
-    gulp.parallel('pug','less'),
+    gulp.parallel('pug','sass'),
     gulp.parallel('watch','serve')
 ));
