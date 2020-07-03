@@ -45,25 +45,43 @@ ul
 
 //====== Styles for header =======
 
-@import 'header'          
-     
+@import 'header_top'          
 
 .slider 
-    background: url('../img/bg/slider_img_one.jpg') center center/cover no-repeat
-    padding-bottom: 122px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    padding-top: 4.4%
     
-    h1.slider_text 
-        font-size: 450px
-        color: rgb(87, 81, 83)
-        font-family: $Montserrat
-        text-transform: uppercase
-        text-align: center
-        letter-spacing: 6.5rem
-        margin-bottom: 123px    
-    
+    &_text 
+        display: flex
+        justify-content: space-between
+        margin: 0 auto 20px auto
+        width: 75%
 
-    button.header 
-        margin-left: 1388px
+        span
+            display: block
+            font-size: 450px
+            color: rgb(87, 81, 83)
+            font-family: $Montserrat
+            font-weight: 790
+            text-transform: uppercase
+        
+
+    &_img
+        display: block
+        width: 100%
+        height: 109%
+        position: absolute
+        top: -65px
+        left: 0
+        z-index: -1
+         
+    &_btn 
+        align-self: flex-end
+        margin-right: 20%
         line-height: 1rem
         border-style: solid
         border-width: 2px
@@ -76,13 +94,14 @@ ul
         color: rgb(69, 70, 71)
         text-transform: uppercase
         text-align: center
-        outline: none    
+        outline: none  
+        margin-bottom: 6% 
     
 
-    button:hover 
-        background-color: #00c8c8
-        color: rgb(248, 248, 248)  
-        border: none    
+        &:hover 
+            background-color: #00c8c8
+            color: rgb(248, 248, 248)  
+            border: none    
             
         
     
@@ -94,7 +113,8 @@ section.items
     margin-bottom: 62px
 
     .container 
-        width: 1770px
+        max-width: 1700px
+        margin: 0 175px
         border-top: 1px solid rgb(238, 238, 238)
         border-bottom: 1px solid rgb(238, 238, 238)
         padding-top: 55px
@@ -112,8 +132,6 @@ section.items
 
                     li 
                         list-style-type: none
-                        
-
                         a 
                             font-size: 13px
                             font-family: $Montserrat
@@ -121,24 +139,27 @@ section.items
                             text-transform: uppercase
                             text-decoration: none
                             text-align: left      
-                        
-
-                        a:hover 
-                            color:  rgb(0, 200, 200)
-                        
-                    
-                
-            
-        
+                        &:hover
+                            transform: scale(1.2)
+                            a
+                                color: $blue
 
         .items_wrapper 
             display: flex
             justify-content: space-between
 
+            img
+                width: 100%
+
             .item_left 
+                flex-basis: 49%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
 
                 .item_left_top 
-                    margin-bottom: 30px
+                    display: flex
+                    justify-content: space-between
 
                     .img 
                         display: inline-block
@@ -338,11 +359,12 @@ section.items
 
                         .img .btn_info 
                             display: block
-                        
-                
-            
 
             .item_right 
+                flex-basis: 49%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
 
                 .item_right_top 
                     margin-bottom: 30px 
@@ -376,16 +398,9 @@ section.items
                             text-align: center
                             border-radius: 50% 
                             display: none 
-                        
 
                         .btn_info:hover 
                             cursor: pointer
-                        
-
-                        
-                        
-                        
-                    
 
                     .info_hover 
                         display: none
@@ -435,12 +450,6 @@ section.items
                             .icon:hover 
                                 cursor: pointer
                                 background-color: #00c8c8
-                            
-                        
-                    
-
-                    
-                
 
                 .item_right_top:hover 
                     box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14)
@@ -452,11 +461,9 @@ section.items
                         .img .btn_info 
                             display: block
                         
-
-
-                
-
                 .item_right_bottom 
+                    display: flex
+                    justify-content: space-between
 
                     .img 
                         display: inline-block
@@ -553,12 +560,6 @@ section.items
 
                         .btn_info, .info_hover 
                             display: block
-                        
-                    
-                
-            
-        
-    
 
 
 // ==== Styles for section "lookbook" ====
@@ -569,35 +570,40 @@ section.lookbook
     margin-bottom: 123px
 
     .men 
-        width: 663px
+        flex-basis: 32%
         background: url('../img/bg/lookbook_man.jpg') center center/cover no-repeat
         padding-top: 98px
         padding-bottom: 142px
 
     
     .women 
-        width: 663px
-        background: url('../img/bg/lookbook_women.jpg') center center/cover no-repeat
-        padding-top: 98px
-        padding-bottom: 142px
+        position: relative
+        flex-basis: 32%
+        padding-top: 4.78%
+        padding-bottom: 6.92%
+        &_img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            z-index: -1
+            
 
-
-
-    
 
     .your 
-        width: 663px
+        flex-basis: 32%
         background: url('../img/bg/lookbook_you.jpg') center center/cover no-repeat
         padding-top: 98px
         padding-bottom: 142px
 
-
-
-    
-
     .wrapper 
-        margin-left: 298px
-        margin-right: 54px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        height: 100%
+        margin-left: 45%
+        margin-right: 8%
         text-align: right
 
         h2.title 
@@ -640,9 +646,6 @@ section.lookbook
             background-color: #00c8c8
             color: rgb(248, 248, 248)  
             border: none    
-        
-      
-
 
 // ==== Styles for footer ====
 
@@ -750,12 +753,6 @@ footer
                     i.fa-facebook 
                         margin-left: 0
                     
-                
-            
-        
-    
-
-
 // ==== Styles for section "copyright" ====
 
 .copyright 
@@ -784,7 +781,7 @@ footer
                 display: inline-block
                 margin-left: 35px
             
-        
+@import 'media'      
 
 
 
